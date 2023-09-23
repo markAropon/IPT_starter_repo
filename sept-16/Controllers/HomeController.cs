@@ -29,7 +29,7 @@ namespace sept_16.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "contact page.";
+            ViewBag.Message = "contact informations.";
 
             return View();
         }

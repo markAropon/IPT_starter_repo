@@ -1,9 +1,28 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Contact Pages";
 }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+<body>
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
+<div class="Form-container">
+    <h1>Contact Us</h1>
+    <div class="grid">
+        <asp:Label runat="server" Text="Label" for="name">name</asp:Label>
+        <input id="name" type="text" />
+        <asp:Label runat="server" Text="Label" for="email">email</asp:Label>
+        <input id="email" type="text" />
+        <asp:Label runat="server" Text="Label" for="subject">subject</asp:Label>
+        <input id="subject" type="text" />
+        <asp:Label runat="server" Text="Label" for="message">message</asp:Label>
+        <textarea id="message" rows="2" cols="20"></textarea>
+    </div>
+    <button type="submit" class="submit">Submit</button>
+</div>
+<footer>
+<h3>@ViewBag.Message</h3>
 <address>
     3rd year SBIT-3L<br />
     Aropon, Mark James B.<br />
@@ -13,3 +32,75 @@
     <strong>Facebook:</strong>   <a href="https://www.facebook.com/profile.php?id=100084432798769">Mark James Aropon</a><br />
     @*<strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>*@
 </address>
+</footer>
+</body>
+<style>
+    * {
+        color: #F7F9F9;
+        font-family: 'Roboto Condensed', sans-serif;
+     }
+    body {
+        background-color: #242F2F;
+        }
+
+    .Form-container {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        border-radius: 3px;
+        background-color: #242F2F;
+        }   
+
+        .Form-container h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        margin-top: 10px;
+        }
+
+
+        .grid label {
+            font-weight: bold;
+            align-self: center;
+            font-size: larger;
+        }
+
+        .grid input[type="text"] {
+            width: 100%;
+            height: 30px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+        }
+
+        .grid textarea {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .submit {
+        width: 100%;
+        height: 40px;
+        margin-block: 20px 5px;
+        color:#000000
+        }
+    .Form-container:hover {
+        border: 0.5px solid #1AD8D8;
+        background-color: rgba(7, 227, 227, 0.1);
+        opacity: 1;
+        box-shadow: 10px 10px 98px -53px rgba(131,199,105,0.8);
+        -webkit-box-shadow: 10px 10px 98px -53px rgba(131,199,105,0.8);
+        -moz-box-shadow: 10px 10px 98px -53px rgba(131,199,105,0.8);
+    }
+    footer {
+        margin-top:120px;
+    }
+</style>
