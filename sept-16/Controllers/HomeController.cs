@@ -11,11 +11,11 @@ namespace sept_16.Controllers
         public ActionResult Index()
         {
             var studInfo = new[] {
-            new studentModel { Name = "John", Age = 20 , Id = 1001 , email = "John@email.com" , gender = "Male"},
-            new studentModel { Name = "Alice", Age = 22, Id = 1002 , email = "Alice@email.com" , gender = "Female" },
-            new studentModel { Name = "Mark", Age = 19 , Id = 1003 , email = "Mark@email.com" , gender = "Male"},
-            new studentModel { Name = "Cindy", Age = 26, Id = 1004 , email = "Cindy@email.com" , gender = "Female" },
-            new studentModel { Name = "sarah", Age = 23, Id = 1005 , email = "Sarah@email.com" , gender = "Female" },
+            new studentModel { Name = "mark", Age = 21 , Id = 1001 , email = "mark@email.com" , gender = "Male"},
+            new studentModel { Name = "Alice", Age = 17, Id = 1002 , email = "Alice@email.com" , gender = "Female" },
+            new studentModel { Name = "john", Age = 26 , Id = 1003 , email = "john@email.com" , gender = "Male"},
+            new studentModel { Name = "sandy", Age = 24, Id = 1004 , email = "sandy@email.com" , gender = "Female" },
+            new studentModel { Name = "dean", Age = 23, Id = 1005 , email = "dean@email.com" , gender = "male" },
             };
             return View(studInfo);
         }
