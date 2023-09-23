@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+<body>
+    <div class="width">
+        <h1>Student Informations</h1>
+        <div class="container1">
+            <Table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Id</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                </tr>
+                <tbody>
+                    @foreach (var studinfo in Model)
+                    {
+                        <tr>
+                            <td>@studinfo.Name</td>
+                            <td>@studinfo.Age</td>
+                            <td>@studinfo.Id</td>
+                            <td>@studinfo.email</td>
+                            <td>@studinfo.gender</td>
+                        </tr>
+                    }
+
+                </tbody>
+            </Table>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+        color: #F7F9F9;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    body {
+        display: grid;
+        place-content: center;
+        background-color: #242F2F;
+    }
+
+    h1 {
+        padding-block: 20px;
+    }
+    .width{
+        width:100%;
+    }
+
+    .table {
+        opacity: 0.5;
+        border: 1.5px dashed black;
+        display: block;
+        font-size: 20px;
+        padding: 50px;
+        letter-spacing: .3em;
+        text-align: center;
+    }
+
+    th {
+        text-align: center;
+        margin: 20px;
+        font-weight: 900;
+    }
+
+    .container1 {
+        display: grid;
+        place-content: center;
+    }
+
+    .table:hover {
+        border: 0.5px solid #1AD8D8;
+        background-color: rgba(7, 227, 227, 0.1);
+        opacity: 1;
+        box-shadow: 10px 10px 98px -53px rgba(131,199,105,0.8);
+        -webkit-box-shadow: 10px 10px 98px -53px rgba(131,199,105,0.8);
+        -moz-box-shadow: 10px 10px 98px -53px rgba(131,199,105,0.8);
+    }
+</style>
